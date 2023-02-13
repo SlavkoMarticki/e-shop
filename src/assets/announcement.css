@@ -1,0 +1,32 @@
+.announcement-container{
+    display: none;
+}
+
+@media screen and (min-width: 700px) {
+    .announcement-container{
+        height: 35px;
+        display: block;
+        background-color: #34983E;
+        padding-left: 152px;
+    }
+    .announcement-container .announcement{
+        width: 140px;
+        height: 100%;
+        display: inline-block;   
+        align-items: center;
+    }
+    .announcement-container .announcement img{
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+    }
+    .announcement-container .announcement p{
+        display: inline-block;
+        font-size: 12px;
+        color: white;
+        font-weight: bold;
+        margin-left: 5px;
+    }
+
+
+}

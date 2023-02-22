@@ -1,6 +1,7 @@
 import "../../assets/navbar.css";
 import menu from "../../assets/icons/menu.png";
-import cart from "../../assets/icons/cart.png";
+import greenCart from "../../assets/icons/greenCart.svg";
+import whiteCart from "../../assets/icons/whiteCart.png";
 import search from "../../assets/icons/search.png";
 import logo from "../../assets/icons/logo.png";
 
@@ -18,7 +19,7 @@ export default function Navbar(){
                         <img src={search} alt="" />
                     </button>
                     <button>
-                        <img src={cart} alt="" />
+                        <img src={whiteCart} alt="" />
                     </button>
                 </div>
             </div>
@@ -26,9 +27,16 @@ export default function Navbar(){
                 <div className="logo">
                     <img src={logo} alt="" />
                 </div>
-                <h4>navbar</h4>
-                <h4>navbar</h4>
-                <h4>navbar</h4>
+                <div className="menu-links">
+                    <a href="">Home</a>
+                    <a href="">News</a>
+                    <a href="">Gallery</a>
+                    <a href="">About us</a>
+                    <a href="">Contact</a>
+                </div>
+                <div className="cart-img">
+                    <img src={greenCart} alt="" />
+                </div>
             </div>
         </div>
     );

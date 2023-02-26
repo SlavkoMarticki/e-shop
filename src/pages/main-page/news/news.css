@@ -1,5 +1,5 @@
 .news-container{
-    border: 1px solid black;
+    border: 1px solid white;
     margin: auto;
     height: 100vh;
     width: 80%;
@@ -15,6 +15,36 @@
     color: white;
     letter-spacing: 3px;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 18px;
     margin-left: 10%;
 }
+.news-container .news-holder{
+    margin-top: 110px;
+    width: 100%;
+    height: 80%;
+    text-align: center;
+    overflow: auto;
+}
+.news-container .news-holder .new{
+    
+    width: 265px;
+    height: 272px;
+    display: inline-block;
+    margin: 15px 15px 0px 15px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+.news-container .news-holder .new .new-title p{
+    color: #34983E;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+.news-container .news-holder .new .new-text {
+    padding-right: 10px;
+    height: 80%;
+    overflow: auto;
+}
+.news-container .news-holder .new .new-text ul li{
+    margin-top: 13px;
+}
+
+

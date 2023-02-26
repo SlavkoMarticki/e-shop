@@ -4,3 +4,17 @@
     height: 100vh;
     width: 80%;
 }
+.gallery-container .gallery-header{
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    height: 57px;
+    background-color: #34983E;
+}
+.gallery-container .gallery-header p{
+    color: white;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 10%;
+}

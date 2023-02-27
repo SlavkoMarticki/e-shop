@@ -44,11 +44,19 @@ export default function AboutUs(){
                     <div className="title">
                         <p>Goals</p>
                     </div>
+                    <div className="goals-text">
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam fugiat quam aut illum porro ea impedit fugit nam. Exercitationem vitae et est deleniti beatae sequi corporis nostrum molestias repellendus deserunt?</li>
+                        </ul>
+                    </div>
                 </div>
               
                 <div class="motto">
                     <div className="title">
                         <p>Motto</p>
+                    </div>
+                    <div className="motto-text">
+                        <p>"Always work on your goals"</p>
                     </div>
                 </div>
             </div>

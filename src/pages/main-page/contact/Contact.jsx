@@ -1,4 +1,5 @@
 import "./contact.css";
+import map from "../../../assets/images/map.png";
 
 export default function Contact() {
     return (
@@ -29,6 +30,7 @@ export default function Contact() {
             <div className="map">
                <div className="map-header">
                     <p>Find us on map</p>
+                    <img src={map} alt="" />
                </div>
             </div>
         </div>

@@ -20,13 +20,12 @@
 .contact-container .email{
     float: left;
     width: 50%;
-    background-color: aqua;
     margin: 0px;
 }
 .contact-container .email .email-section{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
     height: 580px;
-    width: 321px;
+    width: 361px;
     margin: auto;
     margin-top: 90px;
 }
@@ -97,11 +96,10 @@
     width: 50%;
     height: 100%;
     float: right;
-    background-color: #b3bdb4;
 }
 .contact-container .map .map-header{
-    background-color: red;
-    margin-top: 150px;
+    margin-top: 120px;
+    height: 80%;
     text-align: center;
 }
 .contact-container .map .map-header p{
@@ -109,4 +107,12 @@
     letter-spacing: 3px;
     font-weight: bold;
     font-size: 30px;
+    color: #34983E;
 }
+.contact-container .map .map-header img{
+    margin: auto;
+    width: 70%;
+    height: 70%;
+    margin-top: 30px;
+}
+

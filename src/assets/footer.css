@@ -1,6 +1,107 @@
 .footer-container{
-    border: 1px solid black;
-    margin: auto;
-    height: 30vh;
-    width: 80%;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    height: 40vh;
 }
+
+.footer-container .footer-info{
+    height: 95%;
+    background-color: #34983E;
+    display: flex;
+}
+
+.footer-container .developer{
+    padding-top: 3px;
+    text-align: center;
+    background-color: #097400;
+    height: 5%;
+    
+}
+.footer-container .developer p{
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0px;
+    font-size: 10px;
+}
+.footer-container .footer-info .contact{
+    flex-grow: 1;
+    height: 100%;
+    width: 33.3%;
+}
+.footer-container .footer-info .contact .header{
+    
+    padding-left: 10%;
+    margin-top: 30px;
+}
+.footer-container .footer-info .contact .header p{
+    margin: 0px;
+    color: white;
+    font-weight: bold;
+
+}
+
+.footer-container .footer-info .contact .body{
+    
+    padding-left: 10%;
+    margin-top: 20px;
+}
+.footer-container .footer-info .contact .body p{
+    margin: 5px 0px 0px 0px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.footer-container .footer-info .shops{
+    flex-grow: 1;
+    height: 100%;
+    width: 33.3%;
+}
+.footer-container .footer-info .shops .header{
+     
+    padding-left: 10%;
+    margin-top: 30px;
+}
+.footer-container .footer-info .shops .header p{
+    margin: 0px;
+    color: white;
+    font-weight: bold;
+}
+.footer-container .footer-info .shops .body{    
+    padding-left: 10%;
+    margin-top: 20px;
+}
+.footer-container .footer-info .shops .body p{
+    margin: 7px 0px 0px 0px;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+.footer-container .footer-info .social-media{
+    flex-grow: 1;
+    height: 100%;
+    width: 33.3%;
+}
+.footer-container .footer-info .social-media .header{
+    padding-left: 10%;
+    margin-top: 30px;
+}
+.footer-container .footer-info .social-media .header p{
+    margin: 0px;
+    color: white;
+    font-weight: bold;
+}
+.footer-container .footer-info .social-media .body{    
+    padding-left: 10%;
+    margin-top: 20px;
+}
+.footer-container .footer-info .social-media .body img{
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    margin-right: 10px ;
+}    

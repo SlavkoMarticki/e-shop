@@ -4,15 +4,17 @@ import greenCart from "../../assets/icons/greenCart.svg";
 import whiteCart from "../../assets/icons/whiteCart.png";
 import search from "../../assets/icons/search.png";
 import logo from "../../assets/icons/logo.png";
+import { useNavigate } from "react-router-dom";
 
 export default function Navbar(){
-    return (
+
+    const navigate = useNavigate();
+
+    return ( 
         <div className="navbar-container">
             <div className="menu-search-chart">
                 <div className="left-side">
-                    <button>
-                        <img src={menu} alt="" />
-                    </button>
+                    <img src={menu} alt="" />   
                 </div>
                 <div className="right-side">
                     <button>
@@ -35,7 +37,10 @@ export default function Navbar(){
                     <a href="">Contact</a>
                 </div>
                 <div className="cart-img">
-                    <img src={greenCart} alt="" />
+                    <button onClick={() => {navigate("/orders")}}>
+                        <img src={greenCart} alt="" />
+                    </button>
+                    
                 </div>
             </div>
         </div>

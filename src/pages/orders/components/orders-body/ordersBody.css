@@ -1,0 +1,90 @@
+.orders-body{
+    border: 1px solid black;
+    height: 80vh;
+    width: 80vw;
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+}
+
+.orders-body .product{
+    background-color: aqua;
+    flex-grow: 1;
+    width: 25%;
+}
+.orders-body .product .header{
+    background-color: #F4F4F4;
+    height: 35px;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+.orders-body .product .header p{
+    margin: 0px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    
+}
+.orders-body .price{
+    background-color: antiquewhite;
+    flex-grow: 1;
+    width: 20%;
+}
+.orders-body .price .header{
+    background-color: #F4F4F4;
+    height: 35px;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+.orders-body .price .header p{
+    margin: 0px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.orders-body .quantity{
+    background-color: aquamarine;
+    flex-grow: 1;
+    width: 20%;
+}
+.orders-body .quantity .header{
+    background-color: #F4F4F4;
+    height: 35px;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+.orders-body .quantity .header p{
+    margin: 0px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.orders-body .total{
+    background-color: azure;
+    flex-grow: 1;
+    width: 20%;
+}
+.orders-body .total .header{
+    background-color: #F4F4F4;
+    height: 35px;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+.orders-body .total .header p{
+    margin: 0px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.orders-body .remove{
+    background-color: yellowgreen;
+    flex-grow: 1;
+    width: 15%;
+}
+.orders-body .remove .header{
+    background-color: #F4F4F4;
+    height: 35px;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+.orders-body .remove .header p{
+    margin: 0px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}

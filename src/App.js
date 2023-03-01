@@ -1,4 +1,5 @@
 import MainPage from "./pages/main-page/MainPage";
+import Orders from "./pages/orders/Orders";
 import {
     BrowserRouter as Router,
     Routes,
@@ -11,6 +12,7 @@ export default function App(){
         <Router>
             <Routes>
                 <Route path="/" element= {<MainPage />}/>
+                <Route path="/orders" element= {<Orders />}/>
             </Routes>
         </Router>
         

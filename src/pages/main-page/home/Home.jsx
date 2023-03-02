@@ -1,10 +1,26 @@
 import "./home.css";
 import greenRightArrow from "../../../assets/icons/greenRightArrow.svg";
-import pliers from "../../../assets/icons/pliers.svg";
+import ProductDetails from "../../../layouts/portals/ProductDetails";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function Home() {
+    const [products, setProducts] = useState([]);
+    const [openPortal, setOpenPortal] = useState(false);
+    const [productDetails, setProductDetails] = useState([])
+
+    useEffect(() =>  {
+        const fetchData = async () => {
+            const res = await axios.get("https://dummyjson.com/products");
+            
+            setProducts(res.data.products);
+        }
+        fetchData();
+
+    }, []);
     return  (
         <div className="home-container">
+             {openPortal ? <ProductDetails product={productDetails}  closePortal={setOpenPortal} /> : <></>}
             <div className="categories-products-container">
                 <div className="categories">
                     <div className="categories-title">
@@ -36,313 +52,31 @@ export default function Home() {
                 </div>
 
                 <div className="products">
-                    <div className="product">
-                        <div className="product-title">
-                            <p>Pliers a25</p>
-                        </div>
-                        <div className="product-image">
-                            <img src={pliers} alt="" />
-                        </div>
-                        <div className="product-info">
-                            <div className="product-price">
-                                <p>3.1$</p>
+                    {
+                        products.map(product => {
+                            return <div className="product" key={product.id}>
+                                <div className="product-title">
+                                    <p>{product.title}</p>
+                                </div>
+                                <div className="product-image">
+                                    <img src={product.images[0]} alt="" />
+                                </div>
+                                <div className="product-info">
+                                    <div className="product-price">
+                                        <p>{product.price}$</p>
+                                    </div>
+                                    <div className="product-buttons">
+                                        <button className="blue" onClick={() => {
+                                            setOpenPortal(!openPortal);
+                                            setProductDetails(product);
+                                        }}>Details</button>
+                                        <button>Cart</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="product-buttons">
-                                <button className="blue">Details</button>
-                                <button>Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <div className="product-title">
-                            <p>Pliers a25</p>
-                        </div>
-                        <div className="product-image">
-                            <img src={pliers} alt="" />
-                        </div>
-                        <div className="product-info">
-                            <div className="product-price">
-                                <p>3.1$</p>
-                            </div>
-                            <div className="product-buttons">
-                                <button className="blue" >Details</button>
-                                <button>Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <div className="product-title">
-                            <p>Pliers a25</p>
-                        </div>
-                        <div className="product-image">
-                            <img src={pliers} alt="" />
-                        </div>
-                        <div className="product-info">
-                            <div className="product-price">
-                                <p>3.1$</p>
-                            </div>
-                            <div className="product-buttons">
-                                <button className="blue" >Details</button>
-                                <button>Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <div className="product-title">
-                            <p>Pliers a25</p>
-                        </div>
-                        <div className="product-image">
-                            <img src={pliers} alt="" />
-                        </div>
-                        <div className="product-info">
-                            <div className="product-price">
-                                <p>3.1$</p>
-                            </div>
-                            <div className="product-buttons">
-                                <button className="blue" >Details</button>
-                                <button>Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <div className="product-title">
-                            <p>Pliers a25</p>
-                        </div>
-                        <div className="product-image">
-                            <img src={pliers} alt="" />
-                        </div>
-                        <div className="product-info">
-                            <div className="product-price">
-                                <p>3.1$</p>
-                            </div>
-                            <div className="product-buttons">
-                                <button className="blue" >Details</button>
-                                <button>Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <div className="product-title">
-                            <p>Pliers a25</p>
-                        </div>
-                        <div className="product-image">
-                            <img src={pliers} alt="" />
-                        </div>
-                        <div className="product-info">
-                            <div className="product-price">
-                                <p>3.1$</p>
-                            </div>
-                            <div className="product-buttons">
-                                <button className="blue" >Details</button>
-                                <button>Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <div className="product-title">
-                            <p>Pliers a25</p>
-                        </div>
-                        <div className="product-image">
-                            <img src={pliers} alt="" />
-                        </div>
-                        <div className="product-info">
-                            <div className="product-price">
-                                <p>3.1$</p>
-                            </div>
-                            <div className="product-buttons">
-                                <button className="blue" >Details</button>
-                                <button>Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <div className="product-title">
-                            <p>Pliers a25</p>
-                        </div>
-                        <div className="product-image">
-                            <img src={pliers} alt="" />
-                        </div>
-                        <div className="product-info">
-                            <div className="product-price">
-                                <p>3.1$</p>
-                            </div>
-                            <div className="product-buttons">
-                                <button className="blue" >Details</button>
-                                <button>Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <div className="product-title">
-                            <p>Pliers a25</p>
-                        </div>
-                        <div className="product-image">
-                            <img src={pliers} alt="" />
-                        </div>
-                        <div className="product-info">
-                            <div className="product-price">
-                                <p>3.1$</p>
-                            </div>
-                            <div className="product-buttons">
-                                <button className="blue" >Details</button>
-                                <button>Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <div className="product-title">
-                            <p>Pliers a25</p>
-                        </div>
-                        <div className="product-image">
-                            <img src={pliers} alt="" />
-                        </div>
-                        <div className="product-info">
-                            <div className="product-price">
-                                <p>3.1$</p>
-                            </div>
-                            <div className="product-buttons">
-                                <button className="blue" >Details</button>
-                                <button>Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <div className="product-title">
-                            <p>Pliers a25</p>
-                        </div>
-                        <div className="product-image">
-                            <img src={pliers} alt="" />
-                        </div>
-                        <div className="product-info">
-                            <div className="product-price">
-                                <p>3.1$</p>
-                            </div>
-                            <div className="product-buttons">
-                                <button className="blue" >Details</button>
-                                <button>Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <div className="product-title">
-                            <p>Pliers a25</p>
-                        </div>
-                        <div className="product-image">
-                            <img src={pliers} alt="" />
-                        </div>
-                        <div className="product-info">
-                            <div className="product-price">
-                                <p>3.1$</p>
-                            </div>
-                            <div className="product-buttons">
-                                <button className="blue" >Details</button>
-                                <button>Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <div className="product-title">
-                            <p>Pliers a25</p>
-                        </div>
-                        <div className="product-image">
-                            <img src={pliers} alt="" />
-                        </div>
-                        <div className="product-info">
-                            <div className="product-price">
-                                <p>3.1$</p>
-                            </div>
-                            <div className="product-buttons">
-                                <button className="blue" >Details</button>
-                                <button>Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <div className="product-title">
-                            <p>Pliers a25</p>
-                        </div>
-                        <div className="product-image">
-                            <img src={pliers} alt="" />
-                        </div>
-                        <div className="product-info">
-                            <div className="product-price">
-                                <p>3.1$</p>
-                            </div>
-                            <div className="product-buttons">
-                                <button className="blue" >Details</button>
-                                <button>Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <div className="product-title">
-                            <p>Pliers a25</p>
-                        </div>
-                        <div className="product-image">
-                            <img src={pliers} alt="" />
-                        </div>
-                        <div className="product-info">
-                            <div className="product-price">
-                                <p>3.1$</p>
-                            </div>
-                            <div className="product-buttons">
-                                <button className="blue" >Details</button>
-                                <button>Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <div className="product-title">
-                            <p>Pliers a25</p>
-                        </div>
-                        <div className="product-image">
-                            <img src={pliers} alt="" />
-                        </div>
-                        <div className="product-info">
-                            <div className="product-price">
-                                <p>3.1$</p>
-                            </div>
-                            <div className="product-buttons">
-                                <button className="blue" >Details</button>
-                                <button>Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <div className="product-title">
-                            <p>Pliers a25</p>
-                        </div>
-                        <div className="product-image">
-                            <img src={pliers} alt="" />
-                        </div>
-                        <div className="product-info">
-                            <div className="product-price">
-                                <p>3.1$</p>
-                            </div>
-                            <div className="product-buttons">
-                                <button className="blue" >Details</button>
-                                <button>Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="product">
-                        <div className="product-title">
-                            <p>Pliers a25</p>
-                        </div>
-                        <div className="product-image">
-                            <img src={pliers} alt="" />
-                        </div>
-                        <div className="product-info">
-                            <div className="product-price">
-                                <p>3.1$</p>
-                            </div>
-                            <div className="product-buttons">
-                                <button className="blue" >Details</button>
-                                <button>Cart</button>
-                            </div>
-                        </div>
-                    </div>
-                   
+                        })
+                    }
+                            
                 </div>
 
             </div>

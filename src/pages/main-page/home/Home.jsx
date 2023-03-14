@@ -18,6 +18,29 @@ export default function Home() {
         fetchData();
 
     }, []);
+
+    const addToCart = (product) => {
+        
+        const newProductToCart = {
+            name: product.title,
+            price: product.price,
+            quantity: 1,
+        }
+
+        console.log(newProductToCart);
+        const productsFromStorage = localStorage.getItem("orders");
+        if(productsFromStorage != null){
+            const parseProductFromStorage = JSON.parse(productsFromStorage);
+            console.log(parseProductFromStorage);
+            localStorage.setItem("orders", JSON.stringify([...parseProductFromStorage, {...newProductToCart, id:parseProductFromStorage.length}]));
+        }else{
+            localStorage.setItem("orders", JSON.stringify([{...newProductToCart, id:0}]));
+        }
+
+        
+        
+    }
+
     return  (
         <div className="home-container">
              {openPortal ? <ProductDetails product={productDetails}  closePortal={setOpenPortal} /> : <></>}
@@ -70,7 +93,7 @@ export default function Home() {
                                             setOpenPortal(!openPortal);
                                             setProductDetails(product);
                                         }}>Details</button>
-                                        <button>Cart</button>
+                                        <button onClick={() => {addToCart(product)}}>Cart</button>
                                     </div>
                                 </div>
                             </div>

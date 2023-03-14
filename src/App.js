@@ -1,5 +1,5 @@
-import MainPage from "./pages/main-page/MainPage";
-import Orders from "./pages/orders/Orders";
+import { MainPage, Orders } from './pages'; 
+
 import {
     BrowserRouter as Router,
     Routes,

@@ -6,8 +6,7 @@ export default function ProductDetails(props){
 
     const {product, closePortal} = props;
     
-    
-    console.log(product);
+
 
     return createPortal(
        <div className="background">
